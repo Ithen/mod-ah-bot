@@ -672,15 +672,15 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             // Poor
 
-            if ((config->GreyItemsBin.size() > 0) && (greyItems < greyIcount))
+           if ((config->GreyItemsBin.size() > 0) && (greyItems < greyIcount))
             {
-                choice = 0;
+                choice = AHB_GREY_I;
                 itemID = getElement(config->GreyItemsBin, urand(0, config->GreyItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->GreyTradeGoodsBin.size() > 0) && (greyTGoods < greyTGcount))
             {
-                choice = 7;
+                choice = AHB_GREY_TG;
                 itemID = getElement(config->GreyTradeGoodsBin, urand(0, config->GreyTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -688,13 +688,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->WhiteItemsBin.size() > 0) && (whiteItems < whiteIcount))
             {
-                choice = 1;
+                choice = AHB_WHITE_I;
                 itemID = getElement(config->WhiteItemsBin, urand(0, config->WhiteItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->WhiteTradeGoodsBin.size() > 0) && (whiteTGoods < whiteTGcount))
             {
-                choice = 8;
+                choice = AHB_WHITE_TG;
                 itemID = getElement(config->WhiteTradeGoodsBin, urand(0, config->WhiteTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -702,13 +702,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->GreenItemsBin.size() > 0) && (greenItems < greenIcount))
             {
-                choice = 2;
+                choice = AHB_GREEN_I;
                 itemID = getElement(config->GreenItemsBin, urand(0, config->GreenItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->GreenTradeGoodsBin.size() > 0) && (greenTGoods < greenTGcount))
             {
-                choice = 9;
+                choice = AHB_GREEN_TG;
                 itemID = getElement(config->GreenTradeGoodsBin, urand(0, config->GreenTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -716,13 +716,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->BlueItemsBin.size() > 0) && (blueItems < blueIcount))
             {
-                choice = 3;
+                choice = AHB_BLUE_I;
                 itemID = getElement(config->BlueItemsBin, urand(0, config->BlueItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->BlueTradeGoodsBin.size() > 0) && (blueTGoods < blueTGcount))
             {
-                choice = 10;
+                choice = AHB_BLUE_TG;
                 itemID = getElement(config->BlueTradeGoodsBin, urand(0, config->BlueTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -730,13 +730,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->PurpleItemsBin.size() > 0) && (purpleItems < purpleIcount))
             {
-                choice = 4;
+                choice = AHB_PURPLE_I;
                 itemID = getElement(config->PurpleItemsBin, urand(0, config->PurpleItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->PurpleTradeGoodsBin.size() > 0) && (purpleTGoods < purpleTGcount))
             {
-                choice = 11;
+                choice = AHB_PURPLE_TG;
                 itemID = getElement(config->PurpleTradeGoodsBin, urand(0, config->PurpleTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -744,13 +744,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->OrangeItemsBin.size() > 0) && (orangeItems < orangeIcount))
             {
-                choice = 5;
+                choice = AHB_ORANGE_I;
                 itemID = getElement(config->OrangeItemsBin, urand(0, config->OrangeItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->OrangeTradeGoodsBin.size() > 0) && (orangeTGoods < orangeTGcount))
             {
-                choice = 12;
+                choice = AHB_ORANGE_TG;
                 itemID = getElement(config->OrangeTradeGoodsBin, urand(0, config->OrangeTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -758,13 +758,13 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
             if (itemID == 0 && (config->YellowItemsBin.size() > 0) && (yellowItems < yellowIcount))
             {
-                choice = 6;
+                choice = AHB_YELLOW_I;
                 itemID = getElement(config->YellowItemsBin, urand(0, config->YellowItemsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
             if (itemID == 0 && (config->YellowTradeGoodsBin.size() > 0) && (yellowTGoods < yellowTGcount))
             {
-                choice = 13;
+                choice = AHB_YELLOW_TG;
                 itemID = getElement(config->YellowTradeGoodsBin, urand(0, config->YellowTradeGoodsBin.size() - 1), _id, config->DuplicatesCount, auctionHouse);
             }
 
@@ -941,66 +941,64 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
         config->IncItemCounts(choice); // Global
 
-        switch (choice)
+        switch (choice) // for current loop
         {
-        case 0:
-            ++greyItems;
-            break;
-
-        case 1:
-            ++whiteItems;
-            break;
-
-        case 2:
-            ++greenItems;
-            break;
-
-        case 3:
-            ++blueItems;
-            break;
-
-        case 4:
-            ++purpleItems;
-            break;
-
-        case 5:
-            ++orangeItems;
-            break;
-
-        case 6:
-            ++yellowItems;
-            break;
-
-        case 7:
+        case AHB_GREY_TG:
             ++greyTGoods;
             break;
 
-        case 8:
+        case AHB_WHITE_TG:
             ++whiteTGoods;
             break;
 
-        case 9:
+        case AHB_GREEN_TG:
             ++greenTGoods;
             break;
 
-        case 10:
+        case AHB_BLUE_TG:
             ++blueTGoods;
             break;
 
-        case 11:
+        case AHB_PURPLE_TG:
             ++purpleTGoods;
             break;
 
-        case 12:
+        case AHB_ORANGE_TG:
             ++orangeTGoods;
             break;
 
-        case 13:
+        case AHB_YELLOW_TG:
             ++yellowTGoods;
             break;
 
-        default:
+        case AHB_GREY_I:
+            ++greyItems;
             break;
+
+        case AHB_WHITE_I:
+            ++whiteItems;
+            break;
+
+        case AHB_GREEN_I:
+            ++greenItems;
+            break;
+
+        case AHB_BLUE_I:
+            ++blueItems;
+            break;
+
+        case AHB_PURPLE_I:
+            ++purpleItems;
+            break;
+
+        case AHB_ORANGE_I:
+            ++orangeItems;
+            break;
+
+        case AHB_YELLOW_I:
+            ++yellowItems;
+            break;
+
         }
 
         
