@@ -937,7 +937,9 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
         // 
         // Increments the number of items presents in the auction
-        // 
+        //
+
+        config->IncItemCounts(choice); // Global
 
         switch (choice)
         {
