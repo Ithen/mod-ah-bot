@@ -649,7 +649,6 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
     // Loop variables
     //
 
-    uint32 noSold    = 0; // Tracing counter
     uint32 binEmpty  = 0; // Tracing counter
     uint32 noNeed    = 0; // Tracing counter
     uint32 tooMany   = 0; // Tracing counter
@@ -1001,7 +1000,7 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
             break;
         }
 
-        noSold++;
+        
 
         if (config->TraceSeller)
         {
@@ -1011,7 +1010,7 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
 
     if (config->TraceSeller)
     {
-        LOG_INFO("module", "AHBot [{}]: auctionhouse {}, req={}, sold={}, aboveMin={}, aboveMax={}, loopBrk={}, noNeed={}, tooMany={}, binEmpty={}, err={}", _id, config->GetAHID(), items, noSold, aboveMin, aboveMax, loopBrk, noNeed, tooMany, binEmpty, err);
+        LOG_INFO("module", "AHBot [{}]: auctionhouse {}, req={}, aboveMin={}, aboveMax={}, loopBrk={}, noNeed={}, tooMany={}, binEmpty={}, err={}", _id, config->GetAHID(), items, aboveMin, aboveMax, loopBrk, noNeed, tooMany, binEmpty, err);
     }
 }
 
