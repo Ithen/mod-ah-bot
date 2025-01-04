@@ -939,8 +939,6 @@ void AuctionHouseBot::Sell(Player* AHBplayer, AHBConfig* config)
         // Increments the number of items presents in the auction
         //
 
-        config->IncItemCounts(choice); // Global
-
         switch (choice) // for current loop
         {
         case AHB_GREY_TG:
